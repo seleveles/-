@@ -1,0 +1,3 @@
+pet_type = input("желторотый питон")
+age = input("34")
+nickname = input("Каа")
