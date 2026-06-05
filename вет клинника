@@ -1,3 +1,4 @@
 pet_type = input("желторотый питон")
 age = input("34")
 nickname = input("Каа")
+print(f"Это {pet_type} по кличке \"{nickname}\". Возраст: {age} лет.")
