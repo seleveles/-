@@ -1,4 +1,4 @@
-pet_type = input("желторотый питон")
-age = input("34")
-nickname = input("Каа")
+pet_type = input("желторотый питон")#вид питона
+age = input("34")#возраст
+nickname = input("Каа")#кличка
 print(f"Это {pet_type} по кличке \"{nickname}\". Возраст: {age} лет.")
