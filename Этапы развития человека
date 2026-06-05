@@ -1,0 +1,7 @@
+stage1 = input("Australopithecus:")#Первый этап развития,Австралопитек
+stage2 = input("Homo habilis:")#Второй этап развития,Человек умелый
+stage3 = input("Homo erectus:")#Третий этап развития,Человек прямоходящий
+stage4 = input("Homo neanderthalensis:")#Четвертый этап развития,Неандерталец
+stage5 = input("Homo sapiens sapiens:")#Пятый этап развития,Человек разумный (кроманьонец)
+
+print(stage1, stage2, stage3, stage4, stage5, sep='=> ')
