@@ -1,0 +1,14 @@
+def calculate_from_number(number):
+ones = number % 10# Извлекаем единицы
+tens = (number // 10) % 10# Извлекаем десятки
+hundreds = (number // 100) % 10# Извлекаем сотни
+thousands = (number // 1000) % 10# Извлекаем тысячи
+tens_of_thousands = number // 10000# Извлекаем десятки тысяч
+power_result = tens ** ones# Выполняем вычисления
+multiplied_result = power_result * hundreds
+difference = tens_of_thousands - thousands
+final_result = multiplied_result / difference
+return float(final_result)
+number = 46275
+result = calculate_from_number(number)
+print(result)# Выведет: -16807.0
