@@ -1,5 +1,4 @@
 number = int(input("Введите целое число:"))
-
 if number == 0:
  print("нулевое число")
 elif number < 0:
