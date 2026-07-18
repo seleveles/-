@@ -1,14 +1,19 @@
-def calculate_from_number(number):
-ones = number % 10 # Извлекаем единицы
-tens = (number // 10) % 10 # Извлекаем десятки
-hundreds = (number // 100) % 10 # Извлекаем сотни
-thousands = (number // 1000) % 10 # Извлекаем тысячи
-tens_of_thousands = number // 10000 # Извлекаем десятки тысяч
-power_result = tens ** ones # Выполняем вычисления
-multiplied_result = power_result * hundreds
-difference = tens_of_thousands - thousands
-final_result = multiplied_result / difference
-return float(final_result)
-number = 46275
-result = calculate_from_number(number)
-print(result) # Выведет: -16807.0
+def calculate_product_of_digits(number):
+ # Проверяем, что число трёхзначное
+ if not (100 <= number <= 999):
+ raise ValueError("Число должно быть трёхзначным (от 100 до 999)")
+ 
+ # Получаем цифры числа
+ hundreds = number // 100 # сотни
+ tens = (number // 10)% 10 # десятки
+ ones = number% 10 # единицы
+ 
+ # Вычисляем произведение цифр
+ product = hundreds * tens * ones
+ 
+ return product
+
+# Пример использования
+number = 462
+result = calculate_product_of_digits(number)
+print(result) # Выведет: 48 (так как 4 * 6 * 2 = 48)
