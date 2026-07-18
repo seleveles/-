@@ -9,9 +9,9 @@ for letter in word: # Перебираем каждую букву в слове
         vowel_counts[letter] += 1
     else:
         consonant_count += 1
-print(f"Согласных букв: {consonant_count}") # Выводим общее количество согласных и гласных
-print(f"Гласных букв: {vowel_count}")
-print("Количество каждой гласной буквы:") # Проверяем наличие каждой гласной и выводим результат
+    print(f"Согласных букв: {consonant_count}") # Выводим общее количество согласных и гласных
+    print(f"Гласных букв: {vowel_count}")
+    print("Количество каждой гласной буквы:") # Проверяем наличие каждой гласной и выводим результат
 for vowel in sorted(vowels):
     count = vowel_counts[vowel]
     if count == 0:
