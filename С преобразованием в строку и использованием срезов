@@ -1,12 +1,22 @@
 def calculate_from_number_str(number):
-str_num = str(number)
-tens_of_thousands = int(str_num[0]) # первая цифра
-thousands = int(str_num[1]) # вторая цифра
-hundreds = int(str_num[2]) # третья цифра
-tens = int(str_num[3]) # четвёртая цифра
-ones = int(str_num[4]) # пятая цифра
-result = (tens ** ones) * hundreds / (tens_of_thousands - thousands) # Выполняем вычисления
-return float(result)
-number = 46275 # Пример использования
+ str_num = str(number)
+ 
+ # Предполагаем, что число 5-значное
+ tens_of_thousands = int(str_num[0]) # десятки тысяч
+ thousands = int(str_num[1]) # тысячи
+ hundreds = int(str_num[2]) # сотни
+ tens = int(str_num[3]) # десятки
+ ones = int(str_num[4]) # единицы
+ 
+ # Проверяем деление на ноль
+ denominator = tens_of_thousands – thousands
+ if denominator == 0:
+ raise ValueError("Деление на ноль: (tens_of_thousands – thousands) = 0")
+ 
+ result = (tens ** ones) * hundreds / denominator
+ return float(result)
+
+# Пример использования
+number = 46275 # 5 цифр
 result = calculate_from_number_str(number)
 print(result) # Выведет: -16807.0
