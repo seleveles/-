@@ -1,11 +1,11 @@
 import math
 X = int(input())
-count = 0
-sqrt_X = int(math.isqrt(X)) # Целочисленный квадратный корень
-for d in range(1, sqrt_X + 1):
-if X % d == 0: # Если d — делитель X
-if d * d == X:
-count += 1 # Если d² = X, это один делитель (квадратный корень)
-else:
-count += 2 # Иначе — два делителя: d и X/d
+  count = 0
+  sqrt_X = int(math.isqrt(X)) # Целочисленный квадратный корень
+  for d in range(1, sqrt_X + 1):
+  if X % d == 0: # Если d — делитель X
+  if d * d == X:
+  count += 1 # Если d² = X, это один делитель (квадратный корень)
+  else:
+  count += 2 # Иначе — два делителя: d и X/d
 print(count)
