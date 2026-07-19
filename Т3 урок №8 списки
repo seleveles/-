@@ -1,0 +1,6 @@
+n = int(input())
+arr = []
+for _ in range(n):
+    arr.append(int(input()))
+
+print(*arr[::-1]) # Переворачиваем массив и выводим числа через пробел
