@@ -1,0 +1,45 @@
+def get_age_suffix(age: int) -> str:   # """Возвращает правильное окончание: год/года/лет."""
+      if age % 10 == 1 and age % 100 != 11:
+        return "год"
+    elif 2 <= age % 10 <= 4 and not (12 <= age % 100 <= 14):
+        return "года"
+    else:
+        return "лет"
+
+
+pets = {}
+
+pet_name = input("Введите имя питомца: ") # Ввод данных о питомце
+pet_type = input("Введите вид питомца: ")
+
+while True:
+    age_input = input("Введите возраст питомца (целое число): ")
+    try:
+        pet_age = int(age_input)
+        break
+    except ValueError:
+        print("Возраст должен быть целым числом. Попробуйте ещё раз.")
+
+owner_name = input("Введите имя владельца: ")
+
+pets[pet_name] = { # Заполняем словарь
+    "Вид питомца": pet_type,
+    "Возраст питомца": pet_age,
+    "Имя владельца": owner_name
+}
+
+keys = list(pets.keys()) # Вывод информации о питомце с использованием keys() и values()
+values = list(pets.values()) # Сначала получаем ключи и значения
+
+current_pet_name = keys[0] # Так как у нас один питомец, берём первый элемент
+current_pet_info = values[0]
+
+age_suffix = get_age_suffix(current_pet_info["Возраст питомца"])
+
+output_string = (
+    f"Это {current_pet_info['Вид питомца']} по кличке \"{current_pet_name}\". "
+    f"Возраст питомца: {current_pet_info['Возраст питомца']} {age_suffix}. "
+    f"Имя владельца: {current_pet_info['Имя владельца']}"
+)
+
+print(output_string)
