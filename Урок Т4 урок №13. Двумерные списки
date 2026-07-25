@@ -1,0 +1,42 @@
+import random
+
+# Размерность матрицы 
+size = 4
+
+# Генерация первой матрицы с помощью циклов
+matrix_1 = []
+for i in range(size):
+    row = []
+    for j in range(size):
+        # Генерируем случайные числа в диапазоне, например, от -100 до 100
+        row.append(random.randint(-100, 100))
+    matrix_1.append(row)
+
+# Генерация второй матрицы аналогично
+matrix_2 = []
+for i in range(size):
+    row = []
+    for j in range(size):
+        row.append(random.randint(-100, 100))
+    matrix_2.append(row)
+
+# Сложение матриц: matrix_3[i][j] = matrix_1[i][j] + matrix_2[i][j]
+matrix_3 = []
+for i in range(size):
+    row = []
+    for j in range(size):
+        row.append(matrix_1[i][j] + matrix_2[i][j])
+    matrix_3.append(row)
+
+# Вывод результатов
+print("Матрица 1:")
+for row in matrix_1:
+    print(row)
+
+print("\nМатрица 2:")
+for row in matrix_2:
+    print(row)
+
+print("\nРезультат сложения (Матрица 3):")
+for row in matrix_3:
+    print(row)
